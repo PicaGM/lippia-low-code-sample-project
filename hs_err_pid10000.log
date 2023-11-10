@@ -1,0 +1,218 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 268435456 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3550), pid=10000, tid=4948
+#
+# JRE version:  (17.0.8+9) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (17.0.8+9-LTS-211, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dmaven.multiModuleProjectDirectory=C:\Users\iagus\Desktop\Programacion\Crowdar\Proyectos\TP7\lippia-low-code-sample-project-main -Djansi.passthrough=true -Dmaven.home=C:\Users\iagus\Desktop\Programacion\Programas\IntelliJ IDEA Community Edition 2023.1.3\plugins\maven\lib\maven3 -Dclassworlds.conf=C:\Users\iagus\Desktop\Programacion\Programas\IntelliJ IDEA Community Edition 2023.1.3\plugins\maven\lib\maven3\bin\m2.conf -Dmaven.ext.class.path=C:\Users\iagus\Desktop\Programacion\Programas\IntelliJ IDEA Community Edition 2023.1.3\plugins\maven\lib\maven-event-listener.jar -javaagent:C:\Users\iagus\Desktop\Programacion\Programas\IntelliJ IDEA Community Edition 2023.1.3\lib\idea_rt.jar=64435:C:\Users\iagus\Desktop\Programacion\Programas\IntelliJ IDEA Community Edition 2023.1.3\bin -Dfile.encoding=UTF-8 org.codehaus.classworlds.Launcher -Didea.version=2023.1.3 test
+
+Host: AMD Ryzen 5 2600 Six-Core Processor            , 12 cores, 15G,  Windows 11 , 64 bit Build 22621 (10.0.22621.2215)
+Time: Tue Nov  7 20:25:19 2023 Hora estándar de Argentina elapsed time: 0.011716 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002a00e97b810):  JavaThread "Unknown thread" [_thread_in_vm, id=4948, stack(0x000000a108500000,0x000000a108600000)]
+
+Stack: [0x000000a108500000,0x000000a108600000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x677d0a]
+V  [jvm.dll+0x7d8c54]
+V  [jvm.dll+0x7da3fe]
+V  [jvm.dll+0x7daa63]
+V  [jvm.dll+0x245c5f]
+V  [jvm.dll+0x674bb9]
+V  [jvm.dll+0x6694f2]
+V  [jvm.dll+0x3031d6]
+V  [jvm.dll+0x30a756]
+V  [jvm.dll+0x359f9e]
+V  [jvm.dll+0x35a1cf]
+V  [jvm.dll+0x2da3e8]
+V  [jvm.dll+0x2db354]
+V  [jvm.dll+0x7aa711]
+V  [jvm.dll+0x367b51]
+V  [jvm.dll+0x789979]
+V  [jvm.dll+0x3eb05f]
+V  [jvm.dll+0x3ecae1]
+C  [jli.dll+0x5297]
+C  [ucrtbase.dll+0x29363]
+C  [KERNEL32.DLL+0x1257d]
+C  [ntdll.dll+0x5aa68]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff9595059d8, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000002a00e9ea6e0 GCTaskThread "GC Thread#0" [stack: 0x000000a108600000,0x000000a108700000] [id=6268]
+  0x000002a00e9fb560 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000a108700000,0x000000a108800000] [id=20512]
+  0x000002a00e9fc710 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000a108800000,0x000000a108900000] [id=4524]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff958d3b047]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000002a00e977540] Heap_lock - owner thread: 0x000002a00e97b810
+
+Heap address: 0x0000000700c00000, size: 4084 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000700c00000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff959121499]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (1 events):
+Event: 0.007 Loaded shared library C:\Users\iagus\Desktop\Programacion\Programas\Java\jdk-17.0.8\bin\java.dll
+
+
+Dynamic libraries:
+0x00007ff774f30000 - 0x00007ff774f40000 	C:\Users\iagus\Desktop\Programacion\Programas\Java\jdk-17.0.8\bin\java.exe
+0x00007ff9c4810000 - 0x00007ff9c4a24000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff9c36a0000 - 0x00007ff9c3764000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff9c1df0000 - 0x00007ff9c2194000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff9c1cd0000 - 0x00007ff9c1de1000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff9a6080000 - 0x00007ff9a609b000 	C:\Users\iagus\Desktop\Programacion\Programas\Java\jdk-17.0.8\bin\VCRUNTIME140.dll
+0x00007ff9a7b40000 - 0x00007ff9a7b59000 	C:\Users\iagus\Desktop\Programacion\Programas\Java\jdk-17.0.8\bin\jli.dll
+0x00007ff9c43e0000 - 0x00007ff9c4490000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff9c34d0000 - 0x00007ff9c3577000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff9c2a30000 - 0x00007ff9c2ad6000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff9c46b0000 - 0x00007ff9c47c7000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff9c2860000 - 0x00007ff9c2a0e000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff9ae7e0000 - 0x00007ff9aea73000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2215_none_270d72677387dfc3\COMCTL32.dll
+0x00007ff9c2450000 - 0x00007ff9c2476000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff9c2740000 - 0x00007ff9c2769000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff9c2480000 - 0x00007ff9c2598000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff9c1bc0000 - 0x00007ff9c1c5a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff9bbbe0000 - 0x00007ff9bbbea000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff9c3660000 - 0x00007ff9c3691000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff9a9190000 - 0x00007ff9a919c000 	C:\Users\iagus\Desktop\Programacion\Programas\Java\jdk-17.0.8\bin\vcruntime140_1.dll
+0x00007ff98f210000 - 0x00007ff98f29e000 	C:\Users\iagus\Desktop\Programacion\Programas\Java\jdk-17.0.8\bin\msvcp140.dll
+0x00007ff958a50000 - 0x00007ff95962e000 	C:\Users\iagus\Desktop\Programacion\Programas\Java\jdk-17.0.8\bin\server\jvm.dll
+0x00007ff9c43d0000 - 0x00007ff9c43d8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff9ac550000 - 0x00007ff9ac559000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff9bbb70000 - 0x00007ff9bbba4000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff9c4630000 - 0x00007ff9c46a1000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff9c0cb0000 - 0x00007ff9c0cc8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff9a8c90000 - 0x00007ff9a8c9a000 	C:\Users\iagus\Desktop\Programacion\Programas\Java\jdk-17.0.8\bin\jimage.dll
+0x00007ff9af500000 - 0x00007ff9af72e000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff9c3770000 - 0x00007ff9c3afa000 	C:\WINDOWS\System32\combase.dll
+0x00007ff9c3580000 - 0x00007ff9c3657000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ff9a2350000 - 0x00007ff9a2382000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff9c2310000 - 0x00007ff9c238a000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff9bcdf0000 - 0x00007ff9bcdfe000 	C:\Users\iagus\Desktop\Programacion\Programas\Java\jdk-17.0.8\bin\instrument.dll
+0x00007ff9a42c0000 - 0x00007ff9a42e5000 	C:\Users\iagus\Desktop\Programacion\Programas\Java\jdk-17.0.8\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\iagus\Desktop\Programacion\Programas\Java\jdk-17.0.8\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2215_none_270d72677387dfc3;C:\Users\iagus\Desktop\Programacion\Programas\Java\jdk-17.0.8\bin\server
+
+VM Arguments:
+jvm_args: -Dmaven.multiModuleProjectDirectory=C:\Users\iagus\Desktop\Programacion\Crowdar\Proyectos\TP7\lippia-low-code-sample-project-main -Djansi.passthrough=true -Dmaven.home=C:\Users\iagus\Desktop\Programacion\Programas\IntelliJ IDEA Community Edition 2023.1.3\plugins\maven\lib\maven3 -Dclassworlds.conf=C:\Users\iagus\Desktop\Programacion\Programas\IntelliJ IDEA Community Edition 2023.1.3\plugins\maven\lib\maven3\bin\m2.conf -Dmaven.ext.class.path=C:\Users\iagus\Desktop\Programacion\Programas\IntelliJ IDEA Community Edition 2023.1.3\plugins\maven\lib\maven-event-listener.jar -javaagent:C:\Users\iagus\Desktop\Programacion\Programas\IntelliJ IDEA Community Edition 2023.1.3\lib\idea_rt.jar=64435:C:\Users\iagus\Desktop\Programacion\Programas\IntelliJ IDEA Community Edition 2023.1.3\bin -Dfile.encoding=UTF-8 
+java_command: org.codehaus.classworlds.Launcher -Didea.version=2023.1.3 test
+java_class_path (initial): C:\Users\iagus\Desktop\Programacion\Programas\IntelliJ IDEA Community Edition 2023.1.3\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Users\iagus\Desktop\Programacion\Programas\IntelliJ IDEA Community Edition 2023.1.3\plugins\maven\lib\maven3\boot\plexus-classworlds.license
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 268435456                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4282384384                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 4282384384                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Users\iagus\Desktop\Programacion\Programas\Java\jdk-17.0.8
+PATH=C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\iagus\Desktop\Programacion\Programas\Java\bin;C:\Users\iagus\Desktop\Programacion\Programas\Git\cmd;C:\Users\iagus\Desktop\Programacion\Programas\Java\jdk-17.0.8\bin;C:\Users\iagus\Desktop\Programacion\Programas\apache-maven-3.9.4\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\iagus\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\iagus\AppData\Local\GitHubDesktop\bin;C:\Users\iagus\Desktop\Programacion\Programas\Java\jdk-17.0.8\bin;C:\Users\iagus\AppData\Roaming\npm
+USERNAME=iagus
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.2215)
+OS uptime: 8 days 22:32 hours
+
+CPU: total 12 (initial active 12) (12 cores per cpu, 2 threads per core) family 23 model 8 stepping 2 microcode 0x0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt
+
+Memory: 4k page, system-wide physical 16334M (344M free)
+TotalPageFile size 44859M (AvailPageFile size 121M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 64M, peak: 320M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (17.0.8+9-LTS-211) for windows-amd64 JRE (17.0.8+9-LTS-211), built on Jun 14 2023 10:34:31 by "mach5one" with MS VC++ 17.1 (VS2022)
+
+END.
