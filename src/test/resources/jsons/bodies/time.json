@@ -1,0 +1,15 @@
+{
+  "billable": true,
+  "customFields": [
+    {
+      "customFieldId": "Horitas",
+      "sourceType": "WORKSPACE",
+      "value": {}
+    }
+  ],
+  "description": "Holanda",
+  "end": "2023-11-11T14:20:22Z",
+  "id": "654c426e72a2d00b1507cd65",
+  "projectId": "65452d5d0b296248f920cb3b",
+  "start": "2023-11-11T10:15:22Z"
+}

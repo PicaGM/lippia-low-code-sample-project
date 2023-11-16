@@ -1,0 +1,16 @@
+{
+  "customAttributes": [
+    {
+      "name": "Integrador",
+      "namespace": "Final",
+      "value": "Crowdar"
+    }
+  ],
+  "customFields": [
+    {
+      "customFieldId": "Horas",
+      "sourceType": "WORKSPACE",
+      "value": {}
+    }
+  ]
+}
